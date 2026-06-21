@@ -12,6 +12,9 @@ dann erscheinen sie automatisch in den Popups (sonst wird ein Platzhalter angeze
 - `kantonsschule.jpg` – Alte Kantonsschule
 - `bahnhof.jpg` – Bahnhof Aarau
 - `schachen.jpg` – Schachen / Maienzug-Festplatz
+- `fundstelle-bahnhofstrasse.jpg` – Fundstelle Bahnhofstrasse (Bronzezeit / Römerstrasse)
+- `aareuebergang.jpg` – Spätrömischer Aareübergang (Brückenjoche)
+- `vindonissa.jpg` – Vindonissa (Windisch)
 
 Empfohlene Grösse: ca. 480×280 px (Querformat).
 
