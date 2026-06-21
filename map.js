@@ -132,6 +132,27 @@
       img: "images/schachen.jpg",
       text: "Festwiese, auf der traditionell das Maienzug-Bankett und Fest stattfinden.",
     },
+    {
+      lat: 47.3912,
+      lng: 8.0501,
+      title: "Fundstelle Bahnhofstrasse",
+      img: "images/fundstelle-bahnhofstrasse.jpg",
+      text: "Hier wurden Reste einer bronzezeitlichen Siedlung (um 1000 v. Chr.) ausgegraben. Der Strassenverlauf entspricht der römischen Fernstrasse Salodurum–Vindonissa. (ungefähre Lage)",
+    },
+    {
+      lat: 47.394,
+      lng: 8.046,
+      title: "Spätrömischer Aareübergang",
+      img: "images/aareuebergang.jpg",
+      text: "1976 fanden Taucher im Altlauf der Aare eichene Brückenjoche – wohl spätrömisch, Beleg für einen ~7 m breiten Flussübergang vor der Stadtgründung. (ungefähre Lage)",
+    },
+    {
+      lat: 47.481,
+      lng: 8.219,
+      title: "Vindonissa (Windisch)",
+      img: "images/vindonissa.jpg",
+      text: "Rund 15 km östlich von Aarau: keltisches Oppidum und einziges römisches Legionslager der Schweiz. Hierhin führte die Römerstrasse durch Aarau. (zum Anzeigen herauszoomen)",
+    },
   ];
 
   points.forEach(function (p) {
