@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Informationsseite über die Stadt Aarau – Geschichte und der traditionsreiche Maienzug." />
+  <title>Aarau – Geschichte &amp; Maienzug</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="theme-color" content="#d4002b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#top">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <g transform="translate(32 32)">
+            <g fill="currentColor">
+              <ellipse cx="0" cy="-15" rx="5.5" ry="11"/>
+              <ellipse cx="0" cy="-15" rx="5.5" ry="11" transform="rotate(60)"/>
+              <ellipse cx="0" cy="-15" rx="5.5" ry="11" transform="rotate(120)"/>
+              <ellipse cx="0" cy="-15" rx="5.5" ry="11" transform="rotate(180)"/>
+              <ellipse cx="0" cy="-15" rx="5.5" ry="11" transform="rotate(240)"/>
+              <ellipse cx="0" cy="-15" rx="5.5" ry="11" transform="rotate(300)"/>
+            </g>
+            <circle cx="0" cy="0" r="7" fill="#161616"/>
+          </g>
+        </svg>
+        <span>Aarau</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#ueberblick">Überblick</a></li>
+        <li><a href="#geschichte">Geschichte</a></li>
+        <li><a href="#karte">Karte</a></li>
+        <li><a href="#maienzug">Maienzug</a></li>
+        <li><a href="#programm">Programm</a></li>
+        <li><a href="#besuchen">Besuchen</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content" id="top">
+      <p class="eyebrow">Kanton Aargau · Schweiz</p>
+      <h1>Aarau</h1>
+      <p class="lead">Die «Stadt der schönen Giebel» – einst erste Hauptstadt der Schweiz, heute lebendige Kantonshauptstadt mit grosser Tradition.</p>
+      <div class="hero-stats">
+        <div><span class="stat-num">1240</span><span class="stat-label">um diese Zeit gegründet</span></div>
+        <div><span class="stat-num">1798</span><span class="stat-label">erste Hauptstadt der Schweiz</span></div>
+        <div><span class="stat-num">~21'000</span><span class="stat-label">Einwohnerinnen &amp; Einwohner</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="ueberblick" class="section">
+      <div class="section-inner">
+        <p class="kicker">Überblick</p>
+        <h2>Eine kleine Stadt mit grosser Geschichte</h2>
+        <p>
+          Aarau ist die Hauptstadt des Kantons Aargau und liegt am südlichen Fuss des Juras,
+          am Ufer der Aare. Bekannt ist die Altstadt für ihre rund 70 reich bemalten
+          Dachuntersichten – die berühmten «schönen Giebel», die der Stadt ihren Beinamen
+          gegeben haben.
+        </p>
+        <p>
+          Trotz ihrer überschaubaren Grösse spielte Aarau in der Schweizer Geschichte eine
+          aussergewöhnliche Rolle: 1798 wurde sie für kurze Zeit zur ersten Hauptstadt der
+          neu gegründeten Helvetischen Republik.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Lage</h3>
+            <p>Am Übergang vom Jura ins Mittelland, an der Aare – verkehrsgünstig zwischen Zürich, Basel und Bern.</p>
+          </article>
+          <article class="card">
+            <h3>Altstadt</h3>
+            <p>Gut erhaltene mittelalterliche Gassen, der Schlössli-Turm und die einzigartigen bemalten Giebel.</p>
+          </article>
+          <article class="card">
+            <h3>Identität</h3>
+            <p>Lebendige Kultur, traditionsreiche Feste und ein starkes Bewusstsein für die eigene Geschichte.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="geschichte" class="section section-alt">
+      <div class="section-inner">
+        <p class="kicker">Geschichte</p>
+        <h2>Von der Gründung zur Kantonshauptstadt</h2>
+        <p class="section-intro">
+          Die Geschichte Aaraus reicht vom hochmittelalterlichen Städtchen der Grafen von
+          Kyburg über die Berner Herrschaft bis zur kurzen Zeit als Schweizer Hauptstadt.
+        </p>
+
+        <ol class="timeline">
+          <li>
+            <span class="year">um 1240</span>
+            <div class="timeline-body">
+              <h3>Stadtgründung</h3>
+              <p>Aarau wird unter den Grafen von Kyburg an einer Furt über die Aare als planmässige Stadt angelegt.</p>
+            </div>
+          </li>
+          <li>
+            <span class="year">1283</span>
+            <div class="timeline-body">
+              <h3>Stadtrecht</h3>
+              <p>Aarau erhält von König Rudolf I. von Habsburg ein verbrieftes Stadtrecht und wird habsburgisch.</p>
+            </div>
+          </li>
+          <li>
+            <span class="year">1415</span>
+            <div class="timeline-body">
+              <h3>Unter Berner Herrschaft</h3>
+              <p>Bern erobert den Aargau. Aarau wird für rund 400 Jahre Teil des bernischen Untertanengebiets.</p>
+            </div>
+          </li>
+          <li>
+            <span class="year">1798</span>
+            <div class="timeline-body">
+              <h3>Erste Hauptstadt der Schweiz</h3>
+              <p>Während weniger Monate ist Aarau Hauptstadt der Helvetischen Republik und Sitz des ersten gesamtschweizerischen Parlaments.</p>
+            </div>
+          </li>
+          <li>
+            <span class="year">1803</span>
+            <div class="timeline-body">
+              <h3>Hauptstadt des Kantons Aargau</h3>
+              <p>Mit der Mediationsakte Napoleons entsteht der Kanton Aargau – Aarau wird seine Hauptstadt und ist es bis heute.</p>
+            </div>
+          </li>
+          <li>
+            <span class="year">19./20. Jh.</span>
+            <div class="timeline-body">
+              <h3>Industrie &amp; Bildung</h3>
+              <p>Aarau entwickelt sich zum regionalen Zentrum für Verwaltung, Bildung und Industrie – die alte Kantonsschule geniesst über die Region hinaus Ruf.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="karte" class="section">
+      <div class="section-inner">
+        <p class="kicker">Karte</p>
+        <h2>Aarau auf der Karte</h2>
+        <p class="section-intro">
+          Sehenswürdigkeiten und Stationen des Maienzugs auf einen Blick. Über das Ebenen-Symbol
+          oben rechts lässt sich die Karte auf <strong>historische Karten</strong> umschalten –
+          z.&nbsp;B. die Dufour- und Siegfriedkarte aus der Zeit um 1850 (Quelle: swisstopo).
+        </p>
+        <div id="map" role="application" aria-label="Interaktive Karte von Aarau"></div>
+        <p class="map-hint">
+          Tipp: Klicke auf einen Marker, um Infos und ein Bild zu sehen. Die historischen Karten
+          stammen vom Bundesamt für Landestopografie swisstopo.
+        </p>
+      </div>
+    </section>
+
+    <section id="maienzug" class="section section-alt">
+      <div class="section-inner">
+        <img class="maienzug-logo" src="images/logo.svg" alt="Maienzug Aarau Logo" width="300" height="80" />
+        <p class="kicker">Tradition</p>
+        <h2>Der Maienzug</h2>
+        <p class="section-intro">
+          Der Maienzug ist das grösste und wichtigste Fest der Stadt Aarau – ein Jugend-
+          und Bürgerfest mit jahrhundertealter Tradition, das jedes Jahr die ganze Stadt
+          auf die Beine bringt.
+        </p>
+
+        <div class="feature">
+          <div class="feature-text">
+            <h3>Was ist der Maienzug?</h3>
+            <p>
+              Am Maienzug ziehen die Schulkinder Aaraus in festlichem Weiss gekleidet,
+              begleitet von Musik, Fahnen und frischem Grün, durch die geschmückte Stadt.
+              Mädchen tragen weisse Kleider und Blumenkränze, die Knaben festliche Kleidung –
+              ein lebendiges Bild, das Generationen verbindet.
+            </p>
+            <p>
+              Das Fest ist eng mit der Geschichte der Stadt und ihrer Schule verbunden und
+              gilt als Höhepunkt des Jahres für Jung und Alt.
+            </p>
+          </div>
+          <ul class="facts">
+            <li><span class="facts-label">Wann</span><span>Traditionell am ersten Freitag im Juli</span></li>
+            <li><span class="facts-label">Wer</span><span>Schülerinnen und Schüler der Aarauer Schulen</span></li>
+            <li><span class="facts-label">Farbe</span><span>Festliches Weiss, frisches Grün, Blumen</span></li>
+            <li><span class="facts-label">Charakter</span><span>Umzug, Festakt, Bankett und Volksfest</span></li>
+          </ul>
+        </div>
+
+        <h3 class="subhead">Ablauf des Tages</h3>
+        <div class="cards">
+          <article class="card">
+            <span class="card-step">1</span>
+            <h3>Morgen</h3>
+            <p>Wecken durch Tambouren und der festliche Umzug der Schuljugend durch die Altstadt.</p>
+          </article>
+          <article class="card">
+            <span class="card-step">2</span>
+            <h3>Festakt</h3>
+            <p>Ansprachen, Lieder und das gemeinsame Feiern der Schulgemeinschaft und der Stadt.</p>
+          </article>
+          <article class="card">
+            <span class="card-step">3</span>
+            <h3>Nachmittag</h3>
+            <p>Bankett, Spiele und ein fröhliches Volksfest, das bis in den Abend andauert.</p>
+          </article>
+        </div>
+
+        <blockquote class="quote">
+          «Der Maienzug ist für viele Aarauerinnen und Aarauer die schönste Erinnerung
+          an ihre Schulzeit – ein Tag, an dem die ganze Stadt zusammenkommt.»
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="programm" class="section">
+      <div class="section-inner">
+        <p class="kicker">Für die Kids</p>
+        <h2>Maienzug-Programm 2026</h2>
+        <p class="section-intro">
+          Der Tagesablauf auf einen Blick – damit alle wissen, wann es losgeht und wo man sein muss.
+          <br />
+          <span class="note">Maienzug: Freitag, 3. Juli 2026 · Vorabend: Donnerstag, 2. Juli 2026.
+          Genaue Zeiten bitte vor dem Fest mit dem offiziellen Programm der Stadt Aarau abgleichen.</span>
+        </p>
+
+        <h3 class="subhead">Vorabend · Do, 2. Juli</h3>
+        <ol class="program">
+          <li>
+            <span class="prog-time">18:30</span>
+            <div class="prog-body">
+              <h3>🔔 Offizielle Eröffnung</h3>
+              <p>Glockenspiel, Kanonenschüsse und Zapfenstreich der Kadettenmusik.</p>
+            </div>
+          </li>
+          <li>
+            <span class="prog-time">Abend</span>
+            <div class="prog-body">
+              <h3>🎶 Vorabend-Stimmung</h3>
+              <p>Live-Musik auf verschiedenen Bühnen und Beizli bis spät in die Nacht.</p>
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="subhead">Maienzug · Fr, 3. Juli</h3>
+        <ol class="program">
+          <li>
+            <span class="prog-time">07:45</span>
+            <div class="prog-body">
+              <h3>🌤️ Wetterkommission</h3>
+              <p>Die Wetterkommission trifft sich bei der Stadtkirche und entscheidet über das Wetterprogramm.</p>
+            </div>
+          </li>
+          <li>
+            <span class="prog-time">08:00</span>
+            <div class="prog-body">
+              <h3>🥁 Tagwache &amp; Kanonenschüsse</h3>
+              <p>Tagwache und Kanonenschüsse beim Alpenzeiger – der grosse Tag beginnt!</p>
+            </div>
+          </li>
+          <li>
+            <span class="prog-time">09:15</span>
+            <div class="prog-body">
+              <h3>🔔 Glockenspiel</h3>
+              <p>Glockenspiel vom Turm der Stadtkirche.</p>
+            </div>
+          </li>
+          <li>
+            <span class="prog-time">09:30</span>
+            <div class="prog-body">
+              <h3>🎉 Maienzug – Festumzug</h3>
+              <p>Der grosse Umzug der Schulkinder in Weiss, mit Blumen, Musik und Fahnen durch die Altstadt.</p>
+            </div>
+          </li>
+          <li>
+            <span class="prog-time">10:45</span>
+            <div class="prog-body">
+              <h3>🎤 Morgenfeier</h3>
+              <p>Morgenfeier im Leichtathletikstadion Schachen (bei guter Witterung).</p>
+            </div>
+          </li>
+          <li>
+            <span class="prog-time">ab 11:00</span>
+            <div class="prog-body">
+              <h3>🍔 Street Food</h3>
+              <p>Street Food auf dem Maienzugplatz Schachen.</p>
+            </div>
+          </li>
+          <li>
+            <span class="prog-time">ab 12:30</span>
+            <div class="prog-body">
+              <h3>🍽️ Bankett</h3>
+              <p>Bankett auf dem Maienzugplatz Schachen (bei schlechtem Wetter in der Sporthalle Schachen).</p>
+            </div>
+          </li>
+          <li>
+            <span class="prog-time">danach</span>
+            <div class="prog-body">
+              <h3>🎶 Tanz &amp; DJ</h3>
+              <p>Nach dem Bankett geht es mit Tanz &amp; DJ in den Festzelten weiter – bis spät in die Nacht.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="kids-tips">
+          <h3>Checkliste für den Tag 🎒</h3>
+          <ul>
+            <li>Festliche Kleidung bereitlegen (weiss / Blumenkranz)</li>
+            <li>Wetter checken – Sonnenhut und Sonnencreme einpacken</li>
+            <li>Trinkflasche mitnehmen</li>
+            <li>Treffpunkt und Zeit der Klasse notieren</li>
+            <li>Ein bisschen Sackgeld für das Volksfest</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="besuchen" class="section section-alt">
+      <div class="section-inner">
+        <p class="kicker">Besuchen</p>
+        <h2>Aarau entdecken</h2>
+        <p class="section-intro">Ein paar Tipps für einen Besuch in der Altstadt.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Altstadt &amp; Giebel</h3>
+            <p>Ein Spaziergang durch die Gassen lohnt sich – besonders wegen der bemalten Dachuntersichten.</p>
+          </article>
+          <article class="card">
+            <h3>Aare</h3>
+            <p>Die Uferpromenaden laden im Sommer zum Verweilen und Baden ein.</p>
+          </article>
+          <article class="card">
+            <h3>Museen</h3>
+            <p>Das Stadtmuseum und das Aargauer Kunsthaus erzählen Geschichte und zeigen Kunst.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Informationsseite über die Stadt Aarau · Geschichte &amp; Maienzug</p>
+    <p class="footer-note">Erstellt als Übersicht – ohne Gewähr auf Vollständigkeit der historischen Angaben.</p>
+    <p class="footer-note">Kartendaten: © OpenStreetMap-Mitwirkende · Historische Karten: © swisstopo</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="map.js"></script>
+</body>
+</html>
