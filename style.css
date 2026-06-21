@@ -70,8 +70,26 @@ a { color: inherit; text-decoration: none; }
   font-weight: 500;
 }
 
-.nav-links a { opacity: 0.85; transition: opacity 0.2s; }
+.nav-links a { opacity: 0.85; transition: opacity 0.2s; padding-bottom: 2px; border-bottom: 2px solid transparent; }
 .nav-links a:hover { opacity: 1; }
+.nav-links a.active { opacity: 1; border-bottom-color: #fff; }
+
+/* Kleinere Hero-Variante für Unterseiten */
+.hero--sub { padding-bottom: 2.5rem; }
+.hero--sub .hero-content { padding-top: 2.5rem; }
+.hero--sub h1 { font-size: clamp(2.4rem, 6vw, 4rem); }
+
+/* Nacht-Stimmung für Bachfischet */
+.hero--night {
+  background:
+    linear-gradient(160deg, #2a0a12 0%, #161616 60%, #000 100%),
+    radial-gradient(circle at 80% 20%, rgba(212, 0, 43, 0.45), transparent 55%);
+}
+
+/* Teaser-Kacheln (Home) */
+.card-link { text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.15s, box-shadow 0.15s; }
+.card-link:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(22, 22, 22, 0.16); }
+.card-cta { margin-top: auto; padding-top: 0.9rem; color: var(--red); font-weight: 600; font-size: 0.95rem; }
 
 .hero-content {
   max-width: 1100px;
@@ -334,6 +352,54 @@ a { color: inherit; text-decoration: none; }
 
 .leaflet-control-layers { border-radius: 12px !important; box-shadow: var(--shadow) !important; }
 .leaflet-control-layers-list { font-family: "Inter", sans-serif; font-size: 0.9rem; }
+
+/* ---------- Zeitreise ---------- */
+.zeitreise { margin-top: 1rem; }
+.zeitreise #map { margin-top: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+
+.time-panel {
+  background: var(--black);
+  color: #fff;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.time-readout { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.era-name { font-family: "Fraunces", serif; font-size: 1.5rem; font-weight: 600; }
+.era-year { color: var(--red); font-weight: 600; font-size: 1rem; }
+
+.time-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--red), #fff);
+  outline: none;
+  margin: 0.5rem 0 0.25rem;
+}
+.time-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--red);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.time-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--red);
+  cursor: pointer;
+}
+
+.time-ticks { display: flex; justify-content: space-between; font-size: 0.78rem; opacity: 0.75; margin-top: 0.35rem; }
+.era-note { margin: 0.85rem 0 0 !important; font-size: 0.92rem; opacity: 0.85; max-width: none; color: #fff; }
 
 /* ---------- Programm ---------- */
 .note { font-size: 0.95rem; color: var(--accent-warm); display: inline-block; margin-top: 0.5rem; }

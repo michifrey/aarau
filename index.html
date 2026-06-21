@@ -3,21 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Informationsseite über die Stadt Aarau – Geschichte und der traditionsreiche Maienzug." />
-  <title>Aarau – Geschichte &amp; Maienzug</title>
+  <meta name="description" content="Informationsseite über die Stadt Aarau – Geschichte, Zeitreise-Karte und der traditionsreiche Maienzug." />
+  <title>Aarau – Geschichte, Zeitreise &amp; Maienzug</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <meta name="theme-color" content="#d4002b" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <nav class="nav">
-      <a class="brand" href="#top">
+      <a class="brand" href="index.html">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
           <g transform="translate(32 32)">
             <g fill="currentColor">
@@ -34,13 +32,12 @@
         <span>Aarau</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#ueberblick">Überblick</a></li>
-        <li><a href="#geschichte">Geschichte</a></li>
-        <li><a href="#bauten">Bauten</a></li>
-        <li><a href="#karte">Karte</a></li>
-        <li><a href="#maienzug">Maienzug</a></li>
-        <li><a href="#programm">Programm</a></li>
-        <li><a href="#besuchen">Besuchen</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="geschichte.html">Geschichte</a></li>
+        <li><a href="zeitreise.html">Zeitreise</a></li>
+        <li><a href="karte.html">Karte</a></li>
+        <li><a href="maienzug.html">Maienzug</a></li>
+        <li><a href="bachfischet.html">Bachfischet</a></li>
       </ul>
     </nav>
     <div class="hero-content" id="top">
@@ -71,518 +68,40 @@
           aussergewöhnliche Rolle: 1798 wurde sie für kurze Zeit zur ersten Hauptstadt der
           neu gegründeten Helvetischen Republik.
         </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-inner">
+        <p class="kicker">Entdecken</p>
+        <h2>Worum geht's hier?</h2>
+        <p class="section-intro">Wähle ein Thema – von der Ur- und Frühgeschichte bis zum Maienzug für die Kids.</p>
         <div class="cards">
-          <article class="card">
-            <h3>Lage</h3>
-            <p>Am Übergang vom Jura ins Mittelland, an der Aare – verkehrsgünstig zwischen Zürich, Basel und Bern.</p>
-          </article>
-          <article class="card">
-            <h3>Altstadt</h3>
-            <p>Gut erhaltene mittelalterliche Gassen, der Schlössli-Turm und die einzigartigen bemalten Giebel.</p>
-          </article>
-          <article class="card">
-            <h3>Identität</h3>
-            <p>Lebendige Kultur, traditionsreiche Feste und ein starkes Bewusstsein für die eigene Geschichte.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="geschichte" class="section section-alt">
-      <div class="section-inner">
-        <p class="kicker">Geschichte</p>
-        <h2>Von Kelten und Römern zur Kantonshauptstadt</h2>
-        <p class="section-intro">
-          Schon lange vor der Stadtgründung lebten Menschen an dieser Stelle der Aare. Die
-          Geschichte reicht von steinzeitlichen Jägern über keltische Helvetier und römische
-          Strassen bis zum mittelalterlichen Städtchen der Kyburger – und schliesslich zur
-          Kantonshauptstadt.
-        </p>
-
-        <h3 class="subhead">Kelten &amp; Römer – die Zeit vor der Stadt</h3>
-        <div class="cards">
-          <article class="card">
-            <h3>🏕️ Steinzeit &amp; Bronzezeit</h3>
-            <p>
-              Die Besiedlung der Region lässt sich bis zu rund 150'000 Jahre zurückverfolgen. An
-              der heutigen Bahnhofstrasse wurden Reste einer <strong>bronzezeitlichen Siedlung
-              (um 1000 v. Chr.)</strong> ausgegraben.
-            </p>
-          </article>
-          <article class="card">
-            <h3>⚔️ Kelten / Helvetier</h3>
-            <p>
-              Die ersten historisch fassbaren Bewohner waren die keltischen <strong>Helvetier</strong>,
-              die sich im 1. Jahrhundert v. Chr. im Mittelland niederliessen. Nach der Niederlage
-              bei Bibracte (58 v. Chr.) entstand am Sporn zwischen Aare und Reuss ein keltisches
-              Oppidum – der Vorläufer von Vindonissa.
-            </p>
-          </article>
-          <article class="card">
-            <h3>🏛️ Römer</h3>
-            <p>
-              Der Verlauf der heutigen Bahnhofstrasse entspricht der römischen Hauptstrasse von
-              <strong>Salodurum (Solothurn) nach Vindonissa (Windisch)</strong> – dem einzigen
-              römischen Legionslager der Schweiz.
-            </p>
-          </article>
-          <article class="card">
-            <h3>🌉 Aareübergang</h3>
-            <p>
-              1976 entdeckten Taucher im Altlauf der Aare eichene Brückenjoche. Sie sind wohl
-              <strong>spätrömisch</strong> und belegen einen rund 7 Meter breiten Flussübergang –
-              lange vor der Stadtgründung.
-            </p>
-          </article>
-        </div>
-
-        <h3 class="subhead">Römerzeit – das Legionslager Vindonissa</h3>
-        <div class="feature">
-          <div class="feature-text">
-            <p>
-              Rund 15 Kilometer östlich von Aarau, am Zusammenfluss von Aare und Reuss, lag mit
-              <strong>Vindonissa</strong> (beim heutigen Windisch) das <strong>einzige römische
-              Legionslager der Schweiz</strong>. Von 14 bis 101 n. Chr. waren hier nacheinander
-              drei Legionen stationiert: die 13., die 21. und die 11. Legion.
-            </p>
-            <p>
-              Das <strong>Amphitheater von Vindonissa</strong> – um die Mitte des 1. Jahrhunderts
-              errichtet – ist das älteste und grösste der sieben in der Schweiz bekannten
-              Amphitheater. Die 13. Legion baute es unter Kaiser Tiberius zunächst weitgehend aus
-              Holz; nach einem Brand 45 n. Chr. errichtete es die 21. Legion um 50 n. Chr. neu in
-              Stein.
-            </p>
-            <p>
-              Vindonissa kontrollierte wichtige Verkehrswege. Eine <strong>Römerstrasse</strong>
-              führte von Salodurum (Solothurn) durch das Gebiet des späteren Aarau nach Vindonissa –
-              ihr Verlauf entspricht der heutigen Bahnhofstrasse. Aus dem Lager stammt unter anderem
-              die grösste bekannte Sammlung römischer Schreibtäfelchen.
-            </p>
-          </div>
-          <ul class="facts">
-            <li><span class="facts-label">Lage</span><span>Windisch, ~15 km östlich von Aarau</span></li>
-            <li><span class="facts-label">Legionen</span><span>13., 21. &amp; 11. (14–101 n. Chr.)</span></li>
-            <li><span class="facts-label">Amphitheater</span><span>ältestes &amp; grösstes der Schweiz</span></li>
-            <li><span class="facts-label">Berühmte Funde</span><span>grösste Sammlung röm. Schreibtäfelchen</span></li>
-            <li><span class="facts-label">Heute</span><span>Legionärspfad &amp; Vindonissa-Museum</span></li>
-          </ul>
-        </div>
-
-        <h3 class="subhead">Zeitstrahl</h3>
-        <ol class="timeline">
-          <li>
-            <span class="year">um 1000 v. Chr.</span>
-            <div class="timeline-body">
-              <h3>Bronzezeitliche Siedlung</h3>
-              <p>An der heutigen Bahnhofstrasse bestand eine Siedlung der Bronzezeit – einer der frühesten Belege für Menschen an diesem Ort.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">1. Jh. v. Chr.</span>
-            <div class="timeline-body">
-              <h3>Keltische Helvetier</h3>
-              <p>Die Helvetier siedeln im Mittelland. Nach der Schlacht bei Bibracte (58 v. Chr.) entsteht das keltische Oppidum bei Vindonissa.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">um 17 n. Chr.</span>
-            <div class="timeline-body">
-              <h3>Römische Zeit</h3>
-              <p>Die Römer bauen Vindonissa zum Legionslager aus. Die Fernstrasse Salodurum–Vindonissa führt durch das heutige Aarauer Stadtgebiet; ein spätrömischer Aareübergang ist belegt.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">um 1240–1250</span>
-            <div class="timeline-body">
-              <h3>Stadtgründung durch die Kyburger</h3>
-              <p>Die Grafen von Kyburg (Hartmann IV. und Hartmann V.) legen Aarau auf einem Felssporn über der Aare als planmässige Stadt an – an einer wichtigen Furt bzw. einem Übergang über den Fluss.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">1263/64</span>
-            <div class="timeline-body">
-              <h3>Kyburger sterben aus</h3>
-              <p>Das Grafengeschlecht der Kyburger erlischt im Mannesstamm. Die Erbin Agnes von Kyburg hat keine männlichen Verwandten.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">1273</span>
-            <div class="timeline-body">
-              <h3>Übergang an die Habsburger</h3>
-              <p>Agnes von Kyburg verkauft die Ländereien an ihren Patenonkel Rudolf I. von Habsburg. Aarau wird habsburgisch.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">4. März 1283</span>
-            <div class="timeline-body">
-              <h3>Stadtrecht</h3>
-              <p>An einem Hoftag in Luzern bestätigt Rudolf I. von Habsburg die Marktrechte und verleiht Aarau das Stadtrecht – nach dem Vorbild von Winterthur (1264), mit einigen Einschränkungen.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">20. April 1415</span>
-            <div class="timeline-body">
-              <h3>Unter Berner Herrschaft</h3>
-              <p>Bern erobert den Unteraargau. Aarau wird bernische Untertanenstadt und bleibt es fast 400 Jahre.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">1528</span>
-            <div class="timeline-body">
-              <h3>Reformation</h3>
-              <p>Nach der Berner Disputation führt Bern in allen Untertanengebieten die Reformation ein – auch Aarau wird reformiert.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">1798</span>
-            <div class="timeline-body">
-              <h3>Erste Hauptstadt der Schweiz</h3>
-              <p>Während weniger Monate ist Aarau Hauptstadt der Helvetischen Republik und Sitz des ersten gesamtschweizerischen Parlaments.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">1803</span>
-            <div class="timeline-body">
-              <h3>Hauptstadt des Kantons Aargau</h3>
-              <p>Mit der Mediationsakte Napoleons entsteht der Kanton Aargau – Aarau wird seine Hauptstadt und ist es bis heute.</p>
-            </div>
-          </li>
-          <li>
-            <span class="year">19./20. Jh.</span>
-            <div class="timeline-body">
-              <h3>Industrie &amp; Bildung</h3>
-              <p>Aarau entwickelt sich zum regionalen Zentrum für Verwaltung, Bildung und Industrie – die alte Kantonsschule geniesst über die Region hinaus Ruf.</p>
-            </div>
-          </li>
-        </ol>
-
-        <h3 class="subhead">Die Gründung im Detail – Kyburger &amp; Habsburger</h3>
-        <div class="feature">
-          <div class="feature-text">
-            <p>
-              Aarau ist eine <strong>Gründungsstadt des Hochmittelalters</strong>. Zwischen etwa
-              1240 und 1250 legten die <strong>Grafen von Kyburg</strong> – die Brüder bzw.
-              Verwandten Hartmann IV. und Hartmann V. – die Siedlung planmässig auf einem
-              Felssporn über der Aare an. Lage und Grundriss waren bewusst gewählt: Der Fluss
-              bot Schutz, der Übergang über die Aare brachte Verkehr, Zoll und Einnahmen.
-            </p>
-            <p>
-              Als die Kyburger <strong>1263/64</strong> im Mannesstamm ausstarben, fiel das Erbe
-              an <strong>Agnes von Kyburg</strong>, die keine männlichen Verwandten hatte. Sie
-              verkaufte den Besitz <strong>1273</strong> an ihren Patenonkel <strong>Rudolf I.
-              von Habsburg</strong> – kurz bevor dieser römisch-deutscher König wurde. Aarau
-              wurde damit habsburgisch.
-            </p>
-            <p>
-              Am <strong>4. März 1283</strong> verlieh Rudolf I. der Stadt an einem Hoftag in
-              Luzern das Stadtrecht. Es lehnte sich an das Stadtrecht von Winterthur (1264) an,
-              enthielt aber einige Einschränkungen. Unter habsburgischer Herrschaft blieb Aarau
-              bis <strong>1415</strong>, als Bern den Aargau eroberte.
-            </p>
-          </div>
-          <ul class="facts">
-            <li><span class="facts-label">Gegründet</span><span>um 1240–1250</span></li>
-            <li><span class="facts-label">Gründer</span><span>Grafen von Kyburg (Hartmann IV. &amp; V.)</span></li>
-            <li><span class="facts-label">An Habsburg</span><span>1273 durch Agnes von Kyburg</span></li>
-            <li><span class="facts-label">Stadtrecht</span><span>4. März 1283, durch Rudolf I.</span></li>
-            <li><span class="facts-label">Vorbild</span><span>Stadtrecht von Winterthur (1264)</span></li>
-          </ul>
-        </div>
-
-        <h3 class="subhead">Berner Zeit (1415–1798)</h3>
-        <div class="feature">
-          <div class="feature-text">
-            <p>
-              Am <strong>20. April 1415</strong> eroberte Bern den Unteraargau – als Strafaktion
-              gegen den von König Sigismund geächteten Habsburger Herzog Friedrich IV. Aarau wurde
-              <strong>bernische Untertanenstadt</strong> und blieb es fast 400 Jahre.
-            </p>
-            <p>
-              Als eine von vier <strong>Munizipalstädten</strong> (neben Zofingen, Lenzburg und
-              Brugg) behielt Aarau besondere Rechte – darunter die <strong>hohe
-              Gerichtsbarkeit</strong>. Die Stadt verwaltete vieles selbst, stand aber unter der
-              Oberhoheit Berns.
-            </p>
-            <p>
-              <strong>1528</strong> setzte sich nach der Berner Disputation die Reformation durch:
-              Bern führte den neuen Glauben in allen Untertanengebieten ein – auch Aarau wurde
-              reformiert. Die Berner Zeit endete <strong>1798</strong> mit dem Einmarsch der
-              Franzosen und der Gründung der Helvetischen Republik – woraufhin Aarau für fünf
-              Monate erste Hauptstadt der Schweiz wurde.
-            </p>
-          </div>
-          <ul class="facts">
-            <li><span class="facts-label">Erobert</span><span>20. April 1415 durch Bern</span></li>
-            <li><span class="facts-label">Status</span><span>Untertanen- &amp; Munizipalstadt</span></li>
-            <li><span class="facts-label">Sonderrechte</span><span>u. a. hohe Gerichtsbarkeit</span></li>
-            <li><span class="facts-label">Reformation</span><span>1528 eingeführt</span></li>
-            <li><span class="facts-label">Ende</span><span>1798 (Helvetische Republik)</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="bauten" class="section">
-      <div class="section-inner">
-        <p class="kicker">Historische Bauten</p>
-        <h2>Türme, Tore und alte Mauern</h2>
-        <p class="section-intro">
-          Aaraus Altstadt wird bis heute von ihren mittelalterlichen Türmen geprägt. Hier die
-          wichtigsten historischen Bauwerke im Detail.
-        </p>
-
-        <div class="buildings">
-          <article class="building">
-            <div class="building-head">
-              <h3>Oberer Turm <span class="alt-name">(Obertorturm)</span></h3>
-              <div class="badges"><span>frühes 13. Jh.</span><span>62 m hoch</span><span>Uhr 1532</span></div>
-            </div>
-            <p>
-              Das Wahrzeichen Aaraus und mit rund 62 Metern der <strong>höchste erhaltene
-              mittelalterliche Stadtturm der Schweiz</strong>. Der Wehr- und Torturm entstand im
-              frühen 13. Jahrhundert zur Zeit der Stadtgründung und wurde im 16. Jahrhundert um drei
-              Stockwerke zum Wohn- und Wachturm erhöht. Die untersten fünf Stockwerke dienten bis
-              1890 als Gefängniskerker, im neunten Stock sitzt die Turmuhr von 1532, und im Dachstuhl
-              hängt ein Glockenspiel mit elf Glocken.
-            </p>
-            <p class="building-fact">💡 Bis 1876 wohnte zuoberst im Turm der Turmwächter.</p>
-          </article>
-
-          <article class="building">
-            <div class="building-head">
-              <h3>Roreturm <span class="alt-name">(Turm Rore / Rathaus)</span></h3>
-              <div class="badges"><span>13. Jh.</span><span>Stadt erwarb 1515</span><span>Rathaus</span></div>
-            </div>
-            <p>
-              Der Roreturm ist der <strong>älteste Teil des heutigen Rathauses</strong> – eine
-              richtige «Burg in der Stadt» aus dem 13. Jahrhundert. Die Stadt erwarb den wehrhaften
-              Adels- und Wohnturm 1515; rund um ihn wuchs in den folgenden Jahrhunderten das Rathaus.
-              So wurde aus einem Geschlechterturm der Sitz der Stadtregierung.
-            </p>
-            <p class="building-fact">💡 Namensgeber war das Adelsgeschlecht «von Rore».</p>
-          </article>
-
-          <article class="building">
-            <div class="building-head">
-              <h3>Schlössli</h3>
-              <div class="badges"><span>um 1200 / 1236–37</span><span>ältestes Gebäude</span><span>Stadtmuseum</span></div>
-            </div>
-            <p>
-              Das Schlössli am Ostrand der Altstadt ist das <strong>älteste Gebäude Aaraus</strong>.
-              Der Wohnturm aus Findlingen und Aarekies entstand kurz nach 1200 und sicherte den
-              Übergang über die Aare. Der Palas stammt aus dem 13./14. Jahrhundert, jüngere Anbauten
-              kamen im 17. Jahrhundert dazu. Heute beherbergt das Schlössli das Stadtmuseum Aarau.
-            </p>
-            <p class="building-fact">💡 Erbaut aus Findlingen und Kies direkt aus der Aare.</p>
-          </article>
-
-          <article class="building">
-            <div class="building-head">
-              <h3>Stadtkirche</h3>
-              <div class="badges"><span>1471–1478</span><span>Turm 1426/27</span><span>erhöht 1663</span></div>
-            </div>
-            <p>
-              Die reformierte Stadtkirche wurde <strong>1471 bis 1478</strong> im Stil der
-              Bettelordens-Architektur erbaut. Der Kirchturm geht teilweise auf den Vorgängerbau
-              (1426/27) zurück und wurde 1663 durch Werkmeister Simon Erismann erhöht und mit einer
-              Turmuhr versehen.
-            </p>
-            <p class="building-fact">💡 Zusammen mit Oberem Turm und Schlössli prägt sie die Silhouette der Altstadt.</p>
-          </article>
-
-          <article class="building">
-            <div class="building-head">
-              <h3>Die schönen Giebel</h3>
-              <div class="badges"><span>~70 bemalte Dachuntersichten</span></div>
-            </div>
-            <p>
-              Aaraus eigentliches Markenzeichen sind die rund <strong>70 reich bemalten
-              Dachuntersichten</strong> an den Altstadthäusern. Diese weit vorkragenden, farbig
-              gestalteten Giebel gaben der Stadt ihren Beinamen <strong>«Stadt der schönen
-              Giebel»</strong>.
-            </p>
-            <p class="building-fact">💡 Am besten beim Bummel durch die Gassen mit Blick nach oben zu entdecken.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="karte" class="section section-alt">
-      <div class="section-inner">
-        <p class="kicker">Karte</p>
-        <h2>Aarau auf der Karte</h2>
-        <p class="section-intro">
-          Sehenswürdigkeiten, archäologische Fundstellen und Stationen des Maienzugs auf einen
-          Blick – inklusive <strong>Vindonissa</strong> in der weiteren Region (zum Anzeigen
-          herauszoomen). Über das Ebenen-Symbol oben rechts lässt sich die Karte auf
-          <strong>historische Karten</strong> umschalten – z.&nbsp;B. die Dufour- und
-          Siegfriedkarte aus der Zeit um 1850 (Quelle: swisstopo).
-        </p>
-        <div id="map" role="application" aria-label="Interaktive Karte von Aarau"></div>
-        <p class="map-hint">
-          Tipp: Klicke auf einen Marker, um Infos und ein Bild zu sehen. Die historischen Karten
-          stammen vom Bundesamt für Landestopografie swisstopo.
-        </p>
-      </div>
-    </section>
-
-    <section id="maienzug" class="section">
-      <div class="section-inner">
-        <img class="maienzug-logo" src="images/logo.svg" alt="Maienzug Aarau Logo" width="300" height="80" />
-        <p class="kicker">Tradition</p>
-        <h2>Der Maienzug</h2>
-        <p class="section-intro">
-          Der Maienzug ist das grösste und wichtigste Fest der Stadt Aarau – ein Jugend-
-          und Bürgerfest mit jahrhundertealter Tradition, das jedes Jahr die ganze Stadt
-          auf die Beine bringt.
-        </p>
-
-        <div class="feature">
-          <div class="feature-text">
-            <h3>Was ist der Maienzug?</h3>
-            <p>
-              Am Maienzug ziehen die Schulkinder Aaraus in festlichem Weiss gekleidet,
-              begleitet von Musik, Fahnen und frischem Grün, durch die geschmückte Stadt.
-              Mädchen tragen weisse Kleider und Blumenkränze, die Knaben festliche Kleidung –
-              ein lebendiges Bild, das Generationen verbindet.
-            </p>
-            <p>
-              Das Fest ist eng mit der Geschichte der Stadt und ihrer Schule verbunden und
-              gilt als Höhepunkt des Jahres für Jung und Alt.
-            </p>
-          </div>
-          <ul class="facts">
-            <li><span class="facts-label">Wann</span><span>Traditionell am ersten Freitag im Juli</span></li>
-            <li><span class="facts-label">Wer</span><span>Schülerinnen und Schüler der Aarauer Schulen</span></li>
-            <li><span class="facts-label">Farbe</span><span>Festliches Weiss, frisches Grün, Blumen</span></li>
-            <li><span class="facts-label">Charakter</span><span>Umzug, Festakt, Bankett und Volksfest</span></li>
-          </ul>
-        </div>
-
-        <h3 class="subhead">Ablauf des Tages</h3>
-        <div class="cards">
-          <article class="card">
-            <span class="card-step">1</span>
-            <h3>Morgen</h3>
-            <p>Wecken durch Tambouren und der festliche Umzug der Schuljugend durch die Altstadt.</p>
-          </article>
-          <article class="card">
-            <span class="card-step">2</span>
-            <h3>Festakt</h3>
-            <p>Ansprachen, Lieder und das gemeinsame Feiern der Schulgemeinschaft und der Stadt.</p>
-          </article>
-          <article class="card">
-            <span class="card-step">3</span>
-            <h3>Nachmittag</h3>
-            <p>Bankett, Spiele und ein fröhliches Volksfest, das bis in den Abend andauert.</p>
-          </article>
-        </div>
-
-        <blockquote class="quote">
-          «Der Maienzug ist für viele Aarauerinnen und Aarauer die schönste Erinnerung
-          an ihre Schulzeit – ein Tag, an dem die ganze Stadt zusammenkommt.»
-        </blockquote>
-      </div>
-    </section>
-
-    <section id="programm" class="section section-alt">
-      <div class="section-inner">
-        <p class="kicker">Für die Kids</p>
-        <h2>Maienzug-Programm 2026</h2>
-        <p class="section-intro">
-          Der Tagesablauf auf einen Blick – damit alle wissen, wann es losgeht und wo man sein muss.
-          <br />
-          <span class="note">Maienzug: Freitag, 3. Juli 2026 · Vorabend: Donnerstag, 2. Juli 2026.
-          Genaue Zeiten bitte vor dem Fest mit dem offiziellen Programm der Stadt Aarau abgleichen.</span>
-        </p>
-
-        <h3 class="subhead">Vorabend · Do, 2. Juli</h3>
-        <ol class="program">
-          <li>
-            <span class="prog-time">18:30</span>
-            <div class="prog-body">
-              <h3>🔔 Offizielle Eröffnung</h3>
-              <p>Glockenspiel, Kanonenschüsse und Zapfenstreich der Kadettenmusik.</p>
-            </div>
-          </li>
-          <li>
-            <span class="prog-time">Abend</span>
-            <div class="prog-body">
-              <h3>🎶 Vorabend-Stimmung</h3>
-              <p>Live-Musik auf verschiedenen Bühnen und Beizli bis spät in die Nacht.</p>
-            </div>
-          </li>
-        </ol>
-
-        <h3 class="subhead">Maienzug · Fr, 3. Juli</h3>
-        <ol class="program">
-          <li>
-            <span class="prog-time">07:45</span>
-            <div class="prog-body">
-              <h3>🌤️ Wetterkommission</h3>
-              <p>Die Wetterkommission trifft sich bei der Stadtkirche und entscheidet über das Wetterprogramm.</p>
-            </div>
-          </li>
-          <li>
-            <span class="prog-time">08:00</span>
-            <div class="prog-body">
-              <h3>🥁 Tagwache &amp; Kanonenschüsse</h3>
-              <p>Tagwache und Kanonenschüsse beim Alpenzeiger – der grosse Tag beginnt!</p>
-            </div>
-          </li>
-          <li>
-            <span class="prog-time">09:15</span>
-            <div class="prog-body">
-              <h3>🔔 Glockenspiel</h3>
-              <p>Glockenspiel vom Turm der Stadtkirche.</p>
-            </div>
-          </li>
-          <li>
-            <span class="prog-time">09:30</span>
-            <div class="prog-body">
-              <h3>🎉 Maienzug – Festumzug</h3>
-              <p>Der grosse Umzug der Schulkinder in Weiss, mit Blumen, Musik und Fahnen durch die Altstadt.</p>
-            </div>
-          </li>
-          <li>
-            <span class="prog-time">10:45</span>
-            <div class="prog-body">
-              <h3>🎤 Morgenfeier</h3>
-              <p>Morgenfeier im Leichtathletikstadion Schachen (bei guter Witterung).</p>
-            </div>
-          </li>
-          <li>
-            <span class="prog-time">ab 11:00</span>
-            <div class="prog-body">
-              <h3>🍔 Street Food</h3>
-              <p>Street Food auf dem Maienzugplatz Schachen.</p>
-            </div>
-          </li>
-          <li>
-            <span class="prog-time">ab 12:30</span>
-            <div class="prog-body">
-              <h3>🍽️ Bankett</h3>
-              <p>Bankett auf dem Maienzugplatz Schachen (bei schlechtem Wetter in der Sporthalle Schachen).</p>
-            </div>
-          </li>
-          <li>
-            <span class="prog-time">danach</span>
-            <div class="prog-body">
-              <h3>🎶 Tanz &amp; DJ</h3>
-              <p>Nach dem Bankett geht es mit Tanz &amp; DJ in den Festzelten weiter – bis spät in die Nacht.</p>
-            </div>
-          </li>
-        </ol>
-
-        <div class="kids-tips">
-          <h3>Checkliste für den Tag 🎒</h3>
-          <ul>
-            <li>Festliche Kleidung bereitlegen (weiss / Blumenkranz)</li>
-            <li>Wetter checken – Sonnenhut und Sonnencreme einpacken</li>
-            <li>Trinkflasche mitnehmen</li>
-            <li>Treffpunkt und Zeit der Klasse notieren</li>
-            <li>Ein bisschen Sackgeld für das Volksfest</li>
-          </ul>
+          <a class="card card-link" href="geschichte.html">
+            <h3>🏛️ Geschichte</h3>
+            <p>Von Kelten und Römern (Vindonissa) über die Stadtgründung der Kyburger bis zur Berner Zeit – inkl. der historischen Bauten und Türme.</p>
+            <span class="card-cta">Mehr erfahren →</span>
+          </a>
+          <a class="card card-link" href="zeitreise.html">
+            <h3>🕰️ Zeitreise-Karte</h3>
+            <p>Reise mit dem Schieberegler durch die Zeit: Dufourkarte (≈1850), Siegfriedkarte (≈1880) und das heutige Aarau.</p>
+            <span class="card-cta">Zeitreise starten →</span>
+          </a>
+          <a class="card card-link" href="karte.html">
+            <h3>🗺️ Karte</h3>
+            <p>Sehenswürdigkeiten, Türme und archäologische Fundstellen mit Fotos – inklusive Vindonissa in der weiteren Region.</p>
+            <span class="card-cta">Zur Karte →</span>
+          </a>
+          <a class="card card-link" href="maienzug.html">
+            <h3>🌸 Maienzug</h3>
+            <p>Das grösste Fest der Stadt mit dem Programm 2026 und einer Checkliste für die Kids.</p>
+            <span class="card-cta">Zum Maienzug →</span>
+          </a>
+          <a class="card card-link" href="bachfischet.html">
+            <h3>🏮 Bachfischet</h3>
+            <p>Das herbstliche Laternenfest am Stadtbach – älteste lebendige Tradition der Schweiz. 2026: 500-Jahr-Jubiläum.</p>
+            <span class="card-cta">Zum Bachfischet →</span>
+          </a>
         </div>
       </div>
     </section>
@@ -615,9 +134,5 @@
     <p class="footer-note">Erstellt als Übersicht – ohne Gewähr auf Vollständigkeit der historischen Angaben.</p>
     <p class="footer-note">Kartendaten: © OpenStreetMap-Mitwirkende · Historische Karten: © swisstopo</p>
   </footer>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="map.js"></script>
 </body>
 </html>
