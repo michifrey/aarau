@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -109,6 +111,35 @@
             <p>Den Abschluss bildet ein Feuerwerk im Schachen – ein stimmungsvolles Ende des Abends.</p>
           </article>
         </div>
+
+        <h3 class="subhead">Der Bachfischet-Vers</h3>
+        <p>Im Rhythmus und so laut wie möglich rufen und singen die Kinder in Gruppen:</p>
+        <blockquote class="verse">
+          «De Bach isch cho, de Bach isch cho, sind mini Buebe-n-alli do?»<br />
+          <span class="verse-call">«Jo, jo, jo!»</span><br />
+          «Fürio, de Bach brönnt, d'Suhrer händ ne azündt,<br />
+          d'Aarauer händ ne glösche, d'Chüttiger, d'Chüttiger rite-n-uf de Frösche.»
+        </blockquote>
+
+        <h3 class="subhead">Umzugsroute</h3>
+        <p>
+          Der Laternenumzug führt von der <strong>Oberen Vorstadt</strong> durch die Altstadt
+          hinunter zur <strong>Schachenwiese</strong>, wo das Feuerwerk stattfindet.
+        </p>
+        <div id="route-map" role="application" aria-label="Umzugsroute des Bachfischet"></div>
+        <ol class="route-list">
+          <li>Obere Vorstadt</li>
+          <li>Aargauerplatz</li>
+          <li>Vordere Vorstadt</li>
+          <li>Rathausgasse</li>
+          <li>Halden</li>
+          <li>Asylstrasse</li>
+          <li>Schachenallee</li>
+          <li>Schachenwiese</li>
+        </ol>
+        <p class="map-hint">
+          Schematische Darstellung – massgebend ist das offizielle Programm der Stadt Aarau.
+        </p>
       </div>
     </section>
 
@@ -142,5 +173,21 @@
     <p class="footer-note">Erstellt als Übersicht – ohne Gewähr auf Vollständigkeit der historischen Angaben.</p>
     <p class="footer-note">Termine bitte vor dem Fest mit der Stadt Aarau abgleichen.</p>
   </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    window.AARAU_ROUTE = {
+      start: "Obere Vorstadt",
+      end: "Schachenwiese",
+      color: "#d4002b",
+      path: [
+        [47.3908, 8.0455], [47.3916, 8.0480], [47.3920, 8.0487], [47.3923, 8.0468],
+        [47.3921, 8.0442], [47.3933, 8.0448], [47.3942, 8.0490], [47.3950, 8.0546],
+        [47.3949, 8.0586]
+      ]
+    };
+  </script>
+  <script src="route.js"></script>
 </body>
 </html>
