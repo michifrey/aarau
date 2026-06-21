@@ -412,6 +412,31 @@ a { color: inherit; text-decoration: none; }
 .leaflet-control-layers { border-radius: 12px !important; box-shadow: var(--shadow) !important; }
 .leaflet-control-layers-list { font-family: "Inter", sans-serif; font-size: 0.9rem; }
 
+/* Quartier-Karte: Legende & Labels */
+.map-legend {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+}
+.map-legend strong { display: block; margin-bottom: 0.35rem; font-family: "Fraunces", serif; }
+.legend-row { display: flex; align-items: center; gap: 0.5rem; }
+.legend-row i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; opacity: 0.85; }
+.q-label.leaflet-tooltip {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--ink);
+  padding: 1px 5px;
+}
+.q-label.leaflet-tooltip::before { display: none; }
+
 /* ---------- Zeitreise ---------- */
 .zeitreise { margin-top: 1rem; }
 .zeitreise #map { margin-top: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
