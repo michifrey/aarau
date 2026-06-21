@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="Maienzug Aarau">
+  <!-- Blumen-Marke (Maienzug = Blumenkinder) -->
+  <g transform="translate(48 48)">
+    <g fill="#d4002b">
+      <ellipse cx="0" cy="-26" rx="9" ry="18"/>
+      <ellipse cx="0" cy="-26" rx="9" ry="18" transform="rotate(60)"/>
+      <ellipse cx="0" cy="-26" rx="9" ry="18" transform="rotate(120)"/>
+      <ellipse cx="0" cy="-26" rx="9" ry="18" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-26" rx="9" ry="18" transform="rotate(240)"/>
+      <ellipse cx="0" cy="-26" rx="9" ry="18" transform="rotate(300)"/>
+    </g>
+    <circle cx="0" cy="0" r="11" fill="#161616"/>
+    <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+  </g>
+  <!-- Wortmarke -->
+  <text x="92" y="42" font-family="'Fraunces', Georgia, serif" font-size="30" font-weight="600" fill="#161616">Maienzug</text>
+  <text x="92" y="74" font-family="'Inter', sans-serif" font-size="18" letter-spacing="6" fill="#d4002b">AARAU</text>
+</svg>
