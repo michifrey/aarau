@@ -4,6 +4,8 @@ Hier kommen die Fotos für die Karten-Marker hin. Lege die Dateien mit genau die
 dann erscheinen sie automatisch in den Popups (sonst wird ein Platzhalter angezeigt):
 
 - `altstadt.jpg` – Altstadt / schöne Giebel
+- `oberer-turm.jpg` – Oberer Turm (Obertorturm)
+- `roreturm.jpg` – Roreturm / Rathaus
 - `schloessli.jpg` – Schlössli / Stadtmuseum
 - `stadtkirche.jpg` – Stadtkirche
 - `kunsthaus.jpg` – Aargauer Kunsthaus
