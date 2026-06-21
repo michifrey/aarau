@@ -77,6 +77,20 @@
       text: "Mittelalterliche Gassen mit den berühmten bemalten Dachuntersichten.",
     },
     {
+      lat: 47.3902,
+      lng: 8.045,
+      title: "Oberer Turm (Obertorturm)",
+      img: "images/oberer-turm.jpg",
+      text: "Höchster erhaltener mittelalterlicher Stadtturm der Schweiz (62 m). Uhr von 1532, bis 1890 Gefängnis.",
+    },
+    {
+      lat: 47.3918,
+      lng: 8.0436,
+      title: "Roreturm / Rathaus",
+      img: "images/roreturm.jpg",
+      text: "Ältester Teil des Rathauses – ein Wohnturm («Burg in der Stadt») aus dem 13. Jahrhundert.",
+    },
+    {
       lat: 47.3926,
       lng: 8.0432,
       title: "Schlössli &amp; Stadtmuseum",
