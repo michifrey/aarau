@@ -1,7 +1,8 @@
-// Quartiere von Aarau – schematische Übersicht.
-// Stadtteile als farbige Zonen, Quartiere als beschriftete Marker.
-// ACHTUNG: Die Zonen sind schematisch/ungefähr. Genaue Quartiergrenzen:
-// offizielles GIS der Stadt Aarau (GeoView).
+// Quartiere von Aarau.
+//
+// 1) Liegt eine Datei "quartiere.geojson" (in WGS84 / EPSG:4326) im Projekt,
+//    werden die ECHTEN Grenzen daraus gezeichnet (z. B. Export aus GeoView Aarau).
+// 2) Sonst wird eine schematische Übersicht der Stadtteile angezeigt.
 
 (function () {
   "use strict";
@@ -14,6 +15,7 @@
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende',
   }).addTo(map);
 
+  // ---------- schematische Stadtteile (Fallback) ----------
   var stadtteile = [
     {
       name: "Zentrum",
@@ -74,45 +76,68 @@
     },
   ];
 
-  stadtteile.forEach(function (st) {
-    L.polygon(st.poly, {
-      color: st.color,
-      weight: 2,
-      fillColor: st.color,
-      fillOpacity: 0.12,
-    })
-      .addTo(map)
-      .bindTooltip("Stadtteil " + st.name, { sticky: true });
+  function addLegend(rows) {
+    var legend = L.control({ position: "bottomright" });
+    legend.onAdd = function () {
+      var div = L.DomUtil.create("div", "map-legend");
+      var html = "<strong>Stadtteile</strong>";
+      rows.forEach(function (r) {
+        html += '<span class="legend-row"><i style="background:' + r.color + '"></i>' + r.name + "</span>";
+      });
+      div.innerHTML = html;
+      return div;
+    };
+    legend.addTo(map);
+  }
 
-    st.quarters.forEach(function (q) {
-      L.circleMarker([q.lat, q.lng], {
-        radius: 6,
-        color: "#fff",
-        weight: 2,
-        fillColor: st.color,
-        fillOpacity: 1,
-      })
-        .addTo(map)
-        .bindTooltip(q.n, { permanent: true, direction: "right", className: "q-label" })
-        .bindPopup("<strong>" + q.n + "</strong><br>Stadtteil " + st.name);
-    });
-  });
-
-  // Legende
-  var legend = L.control({ position: "bottomright" });
-  legend.onAdd = function () {
-    var div = L.DomUtil.create("div", "map-legend");
-    var html = "<strong>Stadtteile</strong>";
+  function renderSchematic() {
     stadtteile.forEach(function (st) {
-      html +=
-        '<span class="legend-row"><i style="background:' +
-        st.color +
-        '"></i>' +
-        st.name +
-        "</span>";
+      L.polygon(st.poly, { color: st.color, weight: 2, fillColor: st.color, fillOpacity: 0.12 })
+        .addTo(map)
+        .bindTooltip("Stadtteil " + st.name, { sticky: true });
+
+      st.quarters.forEach(function (q) {
+        L.circleMarker([q.lat, q.lng], {
+          radius: 6, color: "#fff", weight: 2, fillColor: st.color, fillOpacity: 1,
+        })
+          .addTo(map)
+          .bindTooltip(q.n, { permanent: true, direction: "right", className: "q-label" })
+          .bindPopup("<strong>" + q.n + "</strong><br>Stadtteil " + st.name);
+      });
     });
-    div.innerHTML = html;
-    return div;
-  };
-  legend.addTo(map);
+    addLegend(stadtteile);
+  }
+
+  // ---------- echte Grenzen aus GeoJSON ----------
+  function pickName(props) {
+    if (!props) return "";
+    var keys = ["name", "NAME", "Name", "quartier", "QUARTIER", "Quartier",
+      "bezeichnung", "BEZEICHNUNG", "qname", "QNAME", "label", "LABEL", "statname"];
+    for (var i = 0; i < keys.length; i++) if (props[keys[i]]) return props[keys[i]];
+    for (var k in props) if (typeof props[k] === "string") return props[k];
+    return "";
+  }
+
+  function renderGeoJSON(gj) {
+    var layer = L.geoJSON(gj, {
+      style: function () {
+        return { color: "#d4002b", weight: 2, fillColor: "#d4002b", fillOpacity: 0.1 };
+      },
+      onEachFeature: function (f, l) {
+        var nm = pickName(f.properties);
+        if (nm) {
+          l.bindTooltip(nm, { sticky: true });
+          l.bindPopup("<strong>" + nm + "</strong>");
+        }
+      },
+    }).addTo(map);
+    try { map.fitBounds(layer.getBounds().pad(0.05)); } catch (e) {}
+    var note = document.getElementById("schema-note");
+    if (note) note.style.display = "none";
+  }
+
+  fetch("quartiere.geojson", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("no geojson"); return r.json(); })
+    .then(renderGeoJSON)
+    .catch(renderSchematic);
 })();

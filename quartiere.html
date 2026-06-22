@@ -61,10 +61,12 @@
         </p>
 
         <div id="map" role="application" aria-label="Karte der Quartiere von Aarau"></div>
-        <p class="map-hint">
+        <p id="schema-note" class="map-hint">
           ⚠️ <strong>Schematische Darstellung.</strong> Die farbigen Zonen sind ungefähre
-          Stadtteil-Bereiche, keine amtlichen Grenzen. Die genauen Quartiergrenzen findest du im
-          offiziellen Stadtplan/GIS: <a href="https://gis.geoview.ch/aarau/" target="_blank" rel="noopener">GeoView Aarau ↗</a>.
+          Stadtteil-Bereiche, keine amtlichen Grenzen. Sobald eine Datei <code>quartiere.geojson</code>
+          (Export aus GeoView Aarau, in WGS84) im Projekt liegt, zeigt die Karte automatisch die
+          <strong>exakten Grenzen</strong>. Offizieller Stadtplan/GIS:
+          <a href="https://gis.geoview.ch/aarau/" target="_blank" rel="noopener">GeoView Aarau ↗</a>.
         </p>
 
         <h3 class="subhead">Stadtteile &amp; ihre Quartiere</h3>
